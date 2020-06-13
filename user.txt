@@ -1,0 +1,5 @@
+user: 	user1 passwd:e585c234
+user: 	user2 passwd:e0b9a9d9
+user: 	user3 passwd:6e20760a
+
+
