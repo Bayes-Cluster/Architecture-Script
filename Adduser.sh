@@ -26,7 +26,7 @@ echo
 chage -d 0 ${line}
 # new a storage dir // The Storage dir need to be changed manually
 mkdir /Storage2030005001_0/${line}
-# set permiision of user's home and storage dir
+# set permission of user's home and storage dir
 chown -R ${line}.${line} /Storage2030005001_0/${line}
 cp -r /etc/skel/* /Storage2030005001_0/${line}/ 
 cp -r /etc/skel/. /Storage2030005001_0/${line}/ 
