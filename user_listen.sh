@@ -14,4 +14,4 @@ chattr +a /var/log/usermonitor/usermonitor.log
 # add this two scripts to `/etc/profile`:
 
 echo "export HISTORY_FILE=/var/log/usermonitor/usermonitor.log" >> /etc/profile
-echo "export PROMPT_COMMAND='{ date "+%y-%m-%d %T ##### $(who am i |awk "{print \$1\" \"\$2\" \"\$5}") #### $(whoami) #### $(history 1 | { read x cmd; echo "$cmd"; })"; }>>$HISTORY_FILE" >> /etc/profile
+echo "export PROMPT_COMMAND='{ date "+%y-%m-%d %T ##### $(who am i |awk "{print \$1\" \"\$2\" \"\$5}") #### $(whoami) #### $(history 1 | { read x cmd; echo "$cmd"; })"; } >>$HISTORY_FILE'" >> /etc/profile
