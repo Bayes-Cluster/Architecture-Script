@@ -2,7 +2,6 @@ import subprocess
 import pandas as pd
 
 ## sinfo
-
 def py_sinfo():
     sinfo = subprocess.run(["sinfo", "-l"], stdout = subprocess.PIPE) ## binary string
     # print(sinfo.stdout.decode("ascii"))
