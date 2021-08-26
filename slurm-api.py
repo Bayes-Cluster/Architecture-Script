@@ -2,8 +2,6 @@ import subprocess
 import pandas as pd
 from flask import Flask, abort, request, jsonify
 
-
-
 ## sinfo
 @app.route('/v1/sinfo/', methods=['GET'])
 def py_sinfo():
