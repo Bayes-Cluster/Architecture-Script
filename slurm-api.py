@@ -4,7 +4,7 @@ from flask import Flask, abort, request, jsonify
 app = Flask(__name__)
 
 ## sinfo
-@app.route('/api/v1.0/sinfo/', methods=['GET'])
+@app.route('/api/v1.0/sinfo/', methods=["GET", "POST"])
 def py_sinfo():
     sinfo = subprocess.run(["sinfo", "-l"], stdout = subprocess.PIPE) ## binary string
     # print(sinfo.stdout.decode("ascii"))
@@ -22,7 +22,7 @@ def py_sinfo():
     return sinfo.to_json()
 
 ## sjob (based on `sacct`)
-@app.route('/api/v1.0/sjob', methods=['GET'])
+@app.route('/api/v1.0/sjob', methods=["GET", "POST"])
 def py_job(username:str):
   username = request.args.get("username")
   sjob = subprocess.run(["sacct", "-u", "{}".format(username)], stdout = subprocess.PIPE) # getpass.getuser() -> get username from bash (import getpass)
