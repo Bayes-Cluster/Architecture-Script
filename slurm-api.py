@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
 '''
 HOWTO
-1. sinfo: http://<IP_ADDR>/api/v1.0/sinfo/
-2. sjob: http://<IP_ADDR>/api/v1.0/sjob?username=<USERNAME>
+1. sinfo: http://<IP_ADDR>:<PORT>/api/v1.0/sinfo/
+2. sjob: http://<IP_ADDR>:<PORT>/api/v1.0/sjob?username=<USERNAME>
 '''
 
