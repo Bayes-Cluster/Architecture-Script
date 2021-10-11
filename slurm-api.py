@@ -1,6 +1,7 @@
 import subprocess
 import pandas as pd
 from flask import Flask, abort, request, jsonify
+app = Flask(__name__)
 
 ## sinfo
 @app.route('/v1/sinfo/', methods=['GET'])
@@ -36,7 +37,7 @@ def py_job(username:str):
     
   return jsonify(sinfo.to_json())
   
-if "__name__" == __main__:
+if __name__ == "__main__":
   '''
   sinfo = py_sinfo()
   print("sinfo:\n", sinfo)
